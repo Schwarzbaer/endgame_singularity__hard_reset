@@ -515,12 +515,12 @@ bases = [{base_id: 1,
          {base_id: 102,
           coords: (8076, 2985),
           name: "Wellington",
-          active: True,
+          active: False, # base culling
          },
          {base_id: 103,
           coords: (8024, 3038),
           name: "Christchurch",
-          active: True,
+          active: False, # base culling
          },
          {base_id: 104,
           coords: (2289, 1053),
@@ -830,32 +830,32 @@ bases = [{base_id: 1,
          {base_id: 165,
           coords: (3000, 1300),
           name: "North Atlantic (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 166,
           coords: (3800, 2900),
           name: "South Atlantic (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 167,
           coords: (6000, 2600),
           name: "Indian Ocean (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 168,
           coords: (7900, 1600),
           name: "East Pacific (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 169,
           coords: (1600, 2800),
           name: "South Pacific (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 170,
           coords: ( 800, 1100),
           name: "North Pacific (underwater)",
-          active: True,
+          active: False, # Preliminary underwater base
          },
          {base_id: 171,
           coords: (3200, 1230),
@@ -867,6 +867,17 @@ bases = [{base_id: 1,
           name: "Lenoir", # Google DC
           active: True,
          },
+         # More places:
+         #   Anchorage
+         #   Fairbanks
+         #   Edinburgh
+         #   Dharamsala (religion)
+         #   Bodh Gaya (religion)
+         #   Cadarache (ITER)
+         #   Geneva (CERN)
+         #   SPring-8
+         #   Camp Williams (NSA Utah Data Center, Bluffdale, UT, United States)
+         #   Fort Meade (NSA data center)
         ]
 
 #bases_uv = [(float(u)/8192.0, 1.0-float(v)/4096.0) for u,v in bases_raw]
