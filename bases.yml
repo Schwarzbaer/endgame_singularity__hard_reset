@@ -1,0 +1,738 @@
+1:
+  active: false
+  coords: !!python/tuple [0.527099609375, 0.7976539589442815]
+  name: Hamburg
+2:
+  active: false
+  coords: !!python/tuple [0.5123291015625, 0.7849462365591398]
+  name: Antwerpen
+  comments: 'base culling'
+3:
+  active: true
+  coords: !!python/tuple [0.523193359375, 0.7785923753665689]
+  name: Frankfurt
+4:
+  active: true
+  coords: !!python/tuple [0.499755859375, 0.7861681329423265]
+  name: London
+5:
+  active: false
+  coords: !!python/tuple [0.4998779296875, 0.783724340175953]
+  name: Saint Hill Green
+  comments: 'redacted'
+6:
+  active: false
+  coords: !!python/tuple [0.4873046875, 0.8169599217986314]
+  name: Boleskine House
+  comments: 'too close to Glasgow'
+7:
+  active: false
+  coords: !!python/tuple [0.4881591796875, 0.8101173020527859]
+  name: Glasgow
+  comments: 'base culling'
+8:
+  active: false
+  coords: !!python/tuple [0.514404296875, 0.7893450635386119]
+  name: Utrecht
+  comments: 'base culling'
+9:
+  active: true
+  coords: !!python/tuple [0.474609375, 0.7150537634408602]
+  name: Lisbon
+10:
+  active: false
+  coords: !!python/tuple [0.537109375, 0.7917888563049853]
+  name: Berlin
+  comments: 'base culling'
+11:
+  active: false
+  coords: !!python/tuple [0.53466796875, 0.8093841642228738]
+  name: Copenhagen
+  comments: 'base culling'
+12:
+  active: false
+  coords: !!python/tuple [0.53466796875, 0.7326490713587488]
+  name: Rome
+13:
+  active: false
+  coords: !!python/tuple [0.4764404296875, 0.7881231671554252]
+  name: Cork
+  comments: 'base culling'
+14:
+  active: true
+  coords: !!python/tuple [0.439208984375, 0.8560606060606061]
+  name: Reykjavik
+15:
+  active: true
+  coords: !!python/tuple [0.5965576171875, 0.6781524926686218]
+  name: Tel Aviv
+16:
+  active: false
+  coords: !!python/tuple [0.56591796875, 0.7108993157380255]
+  name: Athens
+17:
+  active: false
+  coords: !!python/tuple [0.505859375, 0.7302052785923754]
+  name: Barcelona
+18:
+  active: false
+  coords: !!python/tuple [0.48974609375, 0.7245845552297165]
+  name: Madrid
+  comments: 'base culling'
+19:
+  active: false
+  coords: !!python/tuple [0.498291015625, 0.7490224828934506]
+  name: Bordeaux
+  comments: 'base culling'
+20:
+  active: false
+  coords: !!python/tuple [0.523681640625, 0.7631964809384164]
+  name: Zurich
+  comments: 'too close to Liechtenstein'
+21:
+  active: false
+  coords: !!python/tuple [0.5264892578125, 0.7619745845552297]
+  name: Liechtenstein
+  comments: 'base culling'
+22:
+  active: true
+  coords: !!python/tuple [0.5496826171875, 0.8299120234604106]
+  name: Stockholm
+23:
+  active: true
+  coords: !!python/tuple [0.4825439453125, 0.7961876832844574]
+  name: Dublin
+24:
+  active: false
+  coords: !!python/tuple [0.558349609375, 0.7900782013685239]
+  name: Warsaw
+  comments: 'base culling'
+25:
+  active: false
+  coords: !!python/tuple [0.555419921875, 0.7778592375366569]
+  name: Krakow
+26:
+  active: false
+  coords: !!python/tuple [0.5765380859375, 0.7993646138807429]
+  name: Minsk
+  comments: 'base culling'
+27:
+  active: false
+  coords: !!python/tuple [0.54541015625, 0.7675953079178885]
+  name: Vienna
+  comments: 'base culling'
+28:
+  active: false
+  coords: !!python/tuple [0.5531005859375, 0.7634408602150538]
+  name: Budapest
+  comments: 'base culling'
+29:
+  active: false
+  coords: !!python/tuple [0.5723876953125, 0.7468230694037146]
+  name: Bucharest
+  comments: 'base culling'
+30:
+  active: true
+  coords: !!python/tuple [0.585205078125, 0.7580645161290323]
+  name: Odessa
+31:
+  active: false
+  coords: !!python/tuple [0.580322265625, 0.7280058651026393]
+  name: Istanbul
+32:
+  active: true
+  coords: !!python/tuple [0.483154296875, 0.6940371456500489]
+  name: Tangier
+33:
+  active: true
+  coords: !!python/tuple [0.5780029296875, 0.35410557184750735]
+  name: Johannesburg
+34:
+  active: false
+  coords: !!python/tuple [0.499267578125, 0.530791788856305]
+  name: Accra
+35:
+  active: true
+  coords: !!python/tuple [0.5867919921875, 0.6666666666666667]
+  name: Cairo
+36:
+  active: true
+  coords: !!python/tuple [0.60888671875, 0.4618768328445748]
+  name: Zanzibar
+37:
+  active: false
+  coords: !!python/tuple [0.5902099609375, 0.5865102639296187]
+  name: Khartoum
+38:
+  active: false
+  coords: !!python/tuple [0.551513671875, 0.3108504398826979]
+  name: Cape Town
+39:
+  active: false
+  coords: !!python/tuple [0.5423583984375, 0.4755620723362659]
+  name: Kinshasa
+40:
+  active: false
+  coords: !!python/tuple [0.5986328125, 0.6879276637341154]
+  name: Beirut
+41:
+  active: true
+  coords: !!python/tuple [0.7939453125, 0.6165689149560117]
+  name: Hanoi
+42:
+  active: true
+  coords: !!python/tuple [0.796630859375, 0.46505376344086025]
+  name: Jakarta
+43:
+  active: true
+  coords: !!python/tuple [0.7884521484375, 0.5073313782991202]
+  name: Singapore
+44:
+  active: true
+  coords: !!python/tuple [0.8526611328125, 0.708455522971652]
+  name: Seoul
+45:
+  active: true
+  coords: !!python/tuple [0.6534423828125, 0.6402737047898338]
+  name: Dubai
+46:
+  active: false
+  coords: !!python/tuple [0.8360595703125, 0.5808895405669598]
+  name: Manila
+47:
+  active: false
+  coords: !!python/tuple [0.6861572265625, 0.6380742913000977]
+  name: Karachi
+48:
+  active: true
+  coords: !!python/tuple [0.7064208984375, 0.6749755620723363]
+  name: Lahore
+49:
+  active: true
+  coords: !!python/tuple [0.6859130859375, 0.7201857282502444]
+  name: Samarkand
+50:
+  active: true
+  coords: !!python/tuple [0.642822265625, 0.6979472140762464]
+  name: Tehran
+51:
+  active: false
+  coords: !!python/tuple [0.7030029296875, 0.7766373411534702]
+  name: Astana
+52:
+  active: true
+  coords: !!python/tuple [0.796875, 0.7661290322580645]
+  name: Ulaanbaatar
+53:
+  active: true
+  coords: !!python/tuple [0.8375244140625, 0.6388074291300098]
+  name: Taipeh
+54:
+  active: true
+  coords: !!python/tuple [0.8160400390625, 0.626099706744868]
+  name: Hong Kong
+55:
+  active: false
+  coords: !!python/tuple [0.8232421875, 0.7216520039100685]
+  name: Beijing
+56:
+  active: false
+  coords: !!python/tuple [0.8372802734375, 0.673264907135875]
+  name: Shanghai
+57:
+  active: false
+  coords: !!python/tuple [0.8145751953125, 0.6282991202346041]
+  name: Guangzhou
+  comments: 'too close to Hong Kong'
+58:
+  active: false
+  coords: !!python/tuple [0.7890625, 0.6700879765395895]
+  name: Chengdu
+59:
+  active: false
+  coords: !!python/tuple [0.8026123046875, 0.6901270772238515]
+  name: Xi'an
+60:
+  active: false
+  coords: !!python/tuple [0.8516845703125, 0.7539100684261975]
+  name: Harbin
+61:
+  active: true
+  coords: !!python/tuple [0.6043701171875, 0.8096285434995112]
+  name: Moscow
+62:
+  active: true
+  coords: !!python/tuple [0.583984375, 0.8326001955034213]
+  name: Saint Petersburg
+63:
+  active: true
+  coords: !!python/tuple [0.6239013671875, 0.7702834799608993]
+  name: Volgograd
+64:
+  active: true
+  coords: !!python/tuple [0.730224609375, 0.8054740957966764]
+  name: Novosibirsk
+65:
+  active: false
+  coords: !!python/tuple [0.7896728515625, 0.7903225806451613]
+  name: Irkutsk
+66:
+  active: false
+  coords: !!python/tuple [0.5919189453125, 0.8831867057673509]
+  name: Murmansk
+67:
+  active: true
+  coords: !!python/tuple [0.6239013671875, 0.7702834799608993]
+  name: Volgograd
+68:
+  active: true
+  coords: !!python/tuple [0.730224609375, 0.8054740957966764]
+  name: Novosibirsk
+69:
+  active: false
+  coords: !!python/tuple [0.6705322265625, 0.8064516129032258]
+  name: Chelyabinsk
+70:
+  active: false
+  coords: !!python/tuple [0.621826171875, 0.8128054740957966]
+  name: Nizny Novgorod
+71:
+  active: false
+  coords: !!python/tuple [0.8770751953125, 0.6942815249266863]
+  name: Kyoto
+72:
+  active: false
+  coords: !!python/tuple [0.8763427734375, 0.6923264907135875]
+  name: Osaka
+  comments: 'too close to Kyoto and Nagoya'
+73:
+  active: false
+  coords: !!python/tuple [0.8802490234375, 0.6950146627565983]
+  name: Nagoya
+  comments: 'too close to Kyoto and Osaka'
+74:
+  active: true
+  coords: !!python/tuple [0.8880615234375, 0.6979472140762464]
+  name: Tokyo
+75:
+  active: false
+  coords: !!python/tuple [0.891357421875, 0.7123655913978495]
+  name: Sendai
+76:
+  active: false
+  coords: !!python/tuple [0.892578125, 0.7390029325513197]
+  name: Sapporo
+77:
+  active: false
+  coords: !!python/tuple [0.60888671875, 0.6195014662756598]
+  name: Jeddah
+78:
+  active: false
+  coords: !!python/tuple [0.60986328125, 0.6358748778103617]
+  name: Medina
+  comments: 'redacted'
+79:
+  active: false
+  coords: !!python/tuple [0.6104736328125, 0.6187683284457478]
+  name: Mecca
+  comments: 'redacted'
+80:
+  active: true
+  coords: !!python/tuple [0.6297607421875, 0.636852394916911]
+  name: Riyadh
+81:
+  active: false
+  coords: !!python/tuple [0.63330078125, 0.6620234604105573]
+  name: Kuwait City
+82:
+  active: false
+  coords: !!python/tuple [0.6510009765625, 0.6358748778103617]
+  name: Abu Dhabi
+83:
+  active: false
+  coords: !!python/tuple [0.6390380859375, 0.6466275659824047]
+  name: Dammam
+84:
+  active: false
+  coords: !!python/tuple [0.6429443359375, 0.6402737047898338]
+  name: Doha
+85:
+  active: true
+  coords: !!python/tuple [0.702392578125, 0.6058162267839687]
+  name: Mumbai
+86:
+  active: true
+  coords: !!python/tuple [0.7791748046875, 0.576001955034213]
+  name: Bangkok
+87:
+  active: false
+  coords: !!python/tuple [0.718017578125, 0.5962854349951124]
+  name: Hyderabad
+88:
+  active: true
+  coords: !!python/tuple [0.7227783203125, 0.5723362658846529]
+  name: Chennai
+89:
+  active: false
+  coords: !!python/tuple [0.7154541015625, 0.5718475073313782]
+  name: Bangalore
+90:
+  active: false
+  coords: !!python/tuple [0.745361328125, 0.6248778103616813]
+  name: Kolkata
+91:
+  active: true
+  coords: !!python/tuple [0.7142333984375, 0.6588465298142718]
+  name: New Delhi
+92:
+  active: false
+  coords: !!python/tuple [0.925048828125, 0.3465298142717498]
+  name: Brisbane
+93:
+  active: false
+  coords: !!python/tuple [0.91943359375, 0.3113391984359726]
+  name: Sydney
+94:
+  active: false
+  coords: !!python/tuple [0.9140625, 0.303030303030303]
+  name: Canberra
+95:
+  active: false
+  coords: !!python/tuple [0.9029541015625, 0.2893450635386119]
+  name: Melbourne
+96:
+  active: false
+  coords: !!python/tuple [0.8848876953125, 0.3054740957966764]
+  name: Adelaide
+97:
+  active: true
+  coords: !!python/tuple [0.8218994140625, 0.32184750733137835]
+  name: Perth
+98:
+  active: false
+  coords: !!python/tuple [0.90771484375, 0.3924731182795699]
+  name: Cairns
+99:
+  active: false
+  coords: !!python/tuple [0.9212646484375, 0.31647116324535685]
+  name: Newcastle
+  comments: 'too close to Perth'
+100:
+  active: false
+  coords: !!python/tuple [0.8634033203125, 0.43059628543499506]
+  name: Darwin
+101:
+  active: true
+  coords: !!python/tuple [0.9854736328125, 0.2942326490713587]
+  name: Auckland
+102:
+  active: false
+  coords: !!python/tuple [0.98583984375, 0.27052785923753664]
+  name: Wellington
+  comments: 'base culling'
+103:
+  active: false
+  coords: !!python/tuple [0.9794921875, 0.25757575757575757]
+  name: Christchurch
+  comments: 'base culling'
+104:
+  active: false
+  coords: !!python/tuple [0.2794189453125, 0.7426686217008798]
+  name: Toronto
+105:
+  active: false
+  coords: !!python/tuple [0.22998046875, 0.7771260997067448]
+  name: Winnipeg
+106:
+  active: false
+  coords: !!python/tuple [0.1580810546875, 0.7734604105571847]
+  name: Vancouver
+  comments: 'too close to Seattle'
+107:
+  active: false
+  coords: !!python/tuple [0.1846923828125, 0.7976539589442815]
+  name: Edmonton
+108:
+  active: false
+  coords: !!python/tuple [0.3017578125, 0.7602639296187683]
+  name: Quebec
+109:
+  active: true
+  coords: !!python/tuple [0.29541015625, 0.7531769305962854]
+  name: Montreal
+110:
+  active: true
+  coords: !!python/tuple [0.16015625, 0.7636852394916911]
+  name: Seattle
+111:
+  active: false
+  coords: !!python/tuple [0.2332763671875, 0.7289833822091887]
+  name: Omaha
+112:
+  active: true
+  coords: !!python/tuple [0.174560546875, 0.6818181818181819]
+  name: San Diego
+113:
+  active: false
+  coords: !!python/tuple [0.23095703125, 0.6827956989247312]
+  name: Dallas
+114:
+  active: true
+  coords: !!python/tuple [0.2689208984375, 0.7353372434017595]
+  name: Detroit
+115:
+  active: false
+  coords: !!python/tuple [0.256103515625, 0.7328934506353861]
+  name: Chicago
+116:
+  active: false
+  coords: !!python/tuple [0.2408447265625, 0.7495112414467253]
+  name: Minneapolis
+117:
+  active: false
+  coords: !!python/tuple [0.1717529296875, 0.6884164222873901]
+  name: Los Angeles
+  comments: 'too close to San Diego'
+118:
+  active: false
+  coords: !!python/tuple [0.1885986328125, 0.6857282502443793]
+  name: Phoenix
+119:
+  active: false
+  coords: !!python/tuple [0.189208984375, 0.7258064516129032]
+  name: Salt Lake City
+120:
+  active: false
+  coords: !!python/tuple [0.294189453125, 0.72702834799609]
+  name: New York
+121:
+  active: false
+  coords: !!python/tuple [0.30224609375, 0.7350928641251222]
+  name: Boston
+122:
+  active: true
+  coords: !!python/tuple [0.2657470703125, 0.6874389051808407]
+  name: Atlanta
+123:
+  active: false
+  coords: !!python/tuple [0.277099609375, 0.6434506353861192]
+  name: Miami
+124:
+  active: false
+  coords: !!python/tuple [0.2698974609375, 0.6564027370478984]
+  name: Clearwater
+  comments: 'redacted'
+125:
+  active: false
+  coords: !!python/tuple [0.27294921875, 0.6683773216031281]
+  name: Jacksonville
+126:
+  active: false
+  coords: !!python/tuple [0.2349853515625, 0.6652003910068427]
+  name: Houston
+127:
+  active: false
+  coords: !!python/tuple [0.2080078125, 0.7204301075268817]
+  name: Denver
+128:
+  active: false
+  coords: !!python/tuple [0.2037353515625, 0.6950146627565983]
+  name: Albuquerque
+129:
+  active: false
+  coords: !!python/tuple [0.25, 0.6950146627565983]
+  name: Memphis
+130:
+  active: false
+  coords: !!python/tuple [0.2496337890625, 0.6664222873900294]
+  name: New Orleans
+131:
+  active: false
+  coords: !!python/tuple [0.2244873046875, 0.6075268817204301]
+  name: Mexico City
+132:
+  active: true
+  coords: !!python/tuple [0.2127685546875, 0.614613880742913]
+  name: Guadalajara
+133:
+  active: false
+  coords: !!python/tuple [0.2523193359375, 0.576001955034213]
+  name: San Salvador
+134:
+  active: false
+  coords: !!python/tuple [0.2484130859375, 0.5808895405669598]
+  name: Guatemala
+135:
+  active: true
+  coords: !!python/tuple [0.337646484375, 0.3074291300097751]
+  name: Buenos Aires
+136:
+  active: false
+  coords: !!python/tuple [0.3704833984375, 0.3680351906158358]
+  name: Sao Paolo
+137:
+  active: false
+  coords: !!python/tuple [0.3441162109375, 0.3059628543499511]
+  name: Montevideo
+  comments: 'lacking significance, too close to Buenos Aires'
+138:
+  active: true
+  coords: !!python/tuple [0.3798828125, 0.3721896383186706]
+  name: Rio de Janeiro
+139:
+  active: false
+  coords: !!python/tuple [0.285888671875, 0.43279569892473113]
+  name: Lima
+140:
+  active: false
+  coords: !!python/tuple [0.310302734375, 0.19550342130987297]
+  name: Ushuaia
+141:
+  active: true
+  coords: !!python/tuple [0.2940673828125, 0.5254154447702835]
+  name: Bogota
+142:
+  active: false
+  coords: !!python/tuple [0.3033447265625, 0.2883675464320625]
+  name: Mar del Plata
+143:
+  active: false
+  coords: !!python/tuple [0.3331298828125, 0.4826490713587488]
+  name: Manaus
+144:
+  active: false
+  coords: !!python/tuple [0.3035888671875, 0.3137829912023461]
+  name: Santiago
+145:
+  active: true
+  coords: !!python/tuple [0.2994384765625, 0.9567448680351907]
+  name: Quttinirpaaq
+146:
+  active: true
+  coords: !!python/tuple [0.1624755859375, 0.9056695992179863]
+  name: Banks Island
+147:
+  active: true
+  coords: !!python/tuple [0.0, 1.0]
+  name: North Pole
+148:
+  active: true
+  coords: !!python/tuple [0.751953125, 0.9506353861192571]
+  name: Schmidt Island
+149:
+  active: true
+  coords: !!python/tuple [0.9984130859375, 0.8956500488758553]
+  name: Wrangel Island
+150:
+  active: true
+  coords: !!python/tuple [0.96435546875, 0.06842619745845557]
+  name: Mount Erebus
+151:
+  active: true
+  coords: !!python/tuple [0.8861083984375, 0.11021505376344087]
+  name: Terre Adelie
+152:
+  active: true
+  coords: !!python/tuple [0.5625, 0.026637341153470162]
+  name: Dronnig Maud
+153:
+  active: false
+  coords: !!python/tuple [0.4542236328125, 0.6568914956011731]
+  name: Canary Islands
+154:
+  active: false
+  coords: !!python/tuple [0.42236328125, 0.7143206256109482]
+  name: Azores
+155:
+  active: false
+  coords: !!python/tuple [0.3199462890625, 0.6796187683284458]
+  name: Bermuda
+156:
+  active: false
+  coords: !!python/tuple [0.48095703125, 0.8450635386119257]
+  name: Faroe Islands
+  comments: 'base culling'
+157:
+  active: true
+  coords: !!python/tuple [0.0616455078125, 0.6180351906158358]
+  name: Honolulu
+158:
+  active: false
+  coords: !!python/tuple [0.4344482421875, 0.5828445747800586]
+  name: Cape Verde
+159:
+  active: false
+  coords: !!python/tuple [0.4600830078125, 0.45552297165200395]
+  name: Ascension Island
+160:
+  active: false
+  coords: !!python/tuple [0.483154296875, 0.4279081133919843]
+  name: Saint Helena
+161:
+  active: false
+  coords: !!python/tuple [0.247314453125, 0.49682306940371457]
+  name: Galapagos Islands
+162:
+  active: false
+  coords: !!python/tuple [0.994384765625, 0.40175953079178883]
+  name: Fiji
+163:
+  active: false
+  coords: !!python/tuple [0.958984375, 0.38269794721407624]
+  name: New Caledonia
+164:
+  active: false
+  coords: !!python/tuple [0.9443359375, 0.446236559139785]
+  name: Solomon Islands
+165:
+  active: false
+  coords: !!python/tuple [0.3662109375, 0.6823069403714566]
+  name: North Atlantic (underwater)
+  comments: 'Preliminary underwater base'
+166:
+  active: false
+  coords: !!python/tuple [0.4638671875, 0.2913000977517106]
+  name: South Atlantic (underwater)
+  comments: 'Preliminary underwater base'
+167:
+  active: false
+  coords: !!python/tuple [0.732421875, 0.364613880742913]
+  name: Indian Ocean (underwater)
+  comments: 'Preliminary underwater base'
+168:
+  active: false
+  coords: !!python/tuple [0.96435546875, 0.6089931573802542]
+  name: East Pacific (underwater)
+  comments: 'Preliminary underwater base'
+169:
+  active: false
+  coords: !!python/tuple [0.1953125, 0.3157380254154448]
+  name: South Pacific (underwater)
+  comments: 'Preliminary underwater base'
+170:
+  active: false
+  coords: !!python/tuple [0.09765625, 0.7311827956989247]
+  name: North Pacific (underwater)
+  comments: 'Preliminary underwater base'
+171:
+  active: false
+  coords: !!python/tuple [0.390625, 0.6994134897360704]
+  name: Atlantis
+  comments: 'Just kidding. ...or am I?'
+172:
+  active: false
+  coords: !!python/tuple [0.273681640625, 0.696969696969697]
+  name: Lenoir
+  comments: 'Google DC'
+# More places:
+#   Anchorage
+#   Fairbanks
+#   Edinburgh
+#   Dharamsala (religion)
+#   Bodh Gaya (religion)
+#   Cadarache (ITER)
+#   Geneva (CERN)
+#   SPring-8
+#   Camp Williams (NSA Utah Data Center, Bluffdale, UT, United States)
+#   Fort Meade (NSA data center)
+

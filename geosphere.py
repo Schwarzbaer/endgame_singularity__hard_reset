@@ -230,9 +230,7 @@ class Geosphere(DirectObject):
         segs_per_connection = 30
         vertex = GeomVertexWriter(self.connections_vdata, 'vertex')
         color = GeomVertexWriter(self.connections_vdata, 'color')
-        for c_1, c_2 in self.connections:
-            c_1_uv = (float(c_1[0])/8192.0, 1.0 - float(c_1[1])/4096.0)
-            c_2_uv = (float(c_2[0])/8192.0, 1.0 - float(c_2[1])/4096.0)
+        for c_1_uv, c_2_uv in self.connections:
             # s will be [0.0, 1.0]
             for s in [float(c)/float(segs_per_connection+1) for c in range(0, segs_per_connection+2)]:
                 u = (c_1_uv[0] * s) + (c_2_uv[0] * (1.0 - s))

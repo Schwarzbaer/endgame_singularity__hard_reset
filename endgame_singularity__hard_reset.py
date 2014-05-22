@@ -2,23 +2,39 @@
 
 # TODO (big)
 #   Settings management
-#   Music Player
 #   Event Timeline / Time Managements
+#   Tech Tree visualization
 # TODO (small)
 #   Change the base notation of coordinates from pixel/pixel to uv
 #     Change the whole bases.py to a YAML file
 #   Mouse to rotate geosphere
 #   Oh my god, so much cleanup...
+# TODO (later)
+#   Finish Music Player
+
+
+
+
+
+import sys
+import yaml
+import datetime
+import networkx as nx
 
 from direct.showbase.ShowBase import ShowBase
 from direct.showbase.DirectObject import DirectObject
-import sys
-from geosphere import Geosphere
-import datetime
-import networkx as nx
-from bases import bases, base_id, coords, name, active
 from panda3d.core import NodePath
+
+from geosphere import Geosphere
+from bases import base_id, coords, name, active
 from music import MusicPlayer
+from mechanics import GameSetup, GameState, Timeline, Event, GameClock
+
+# Load base definitions
+f = open('bases.yml', 'r')
+bases = yaml.load(f.read())
+f.close()
+
 default_settings = {'music': {'volume': 0.6,
                               'fade_time': 0.5,
                               'playlists': {'intro': ['Awakening.ogg'],
@@ -98,35 +114,64 @@ class Game(ShowBase, Settings):
         print(t2-t1)
         self.geosphere_np.reparent_to(self.render)
         self.bases = nx.Graph()
+        self.add_bases()
         # Music
         self.music_player = MusicPlayer(self)
+        # Game state
+        self.game_setup = GameSetup()
+        self.game_state = GameState(self.game_setup)
+        self.timeline = Timeline(self.game_state)
+        self.clock = GameClock(self.timeline)
         # Controls
         self.accept("m", self.toggle_geosphere_unwrapping)
-        self.accept("b", self.add_base)
         self.accept("arrow_right", self.move_camera, [1, 0, 0])
         self.accept("arrow_left", self.move_camera, [-1, 0, 0])
         self.accept("arrow_up", self.move_camera, [0, 1, 0])
         self.accept("arrow_down", self.move_camera, [0, -1, 0])
         self.accept("wheel_up", self.move_camera, [0, 0, -1])
         self.accept("wheel_down", self.move_camera, [0, 0, 1])
-        
+        self.accept("c", self.start_clock)
+        self.accept("v", self.clock.set_factor, [0.0])
+        self.accept("b", self.clock.set_factor, [1.0])
+        self.accept("n", self.clock.set_factor, [10.0])
+        self.accept("s", self.clock.skip_clock_to_next_event)
+    
+    def start_clock(self):
+        # The game starts twenty minutes into the future
+        self.clock.set_time(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20))
+        # Just a test event (so far)
+        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+5),
+                                      self.game_state,
+                                      False))
+        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+10),
+                                      self.game_state,
+                                      False))
+        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+15),
+                                      self.game_state,
+                                      False))
+        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+20),
+                                      self.game_state,
+                                      True))
+        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+25),
+                                      self.game_state,
+                                      True))
+        self.clock.start()
+
     def toggle_geosphere_unwrapping(self):
         self.geosphere.toggle_unwrap()
     
-    def add_base(self):
+    def add_bases(self):
         # All your bases are belong to me.
-        for base_def in [b for b in bases if b[active]]:
-            u, v = base_def[coords]
-            u = float(u)/8192.0
-            v = 1.0 - float(v)/4096.0
-            game_base = Base(u, v)
-            self.bases.add_node(base_def[base_id])
-            self.geosphere.add_base(game_base)
+        for base_id, base_def in bases.iteritems():
+            if base_def['active']:
+                u, v = base_def['coords']
+                game_base = Base(u, v)
+                self.bases.add_node(base_id)
+                self.geosphere.add_base(game_base)
         # Now for a connection
         for b1, b2 in [(22, 3), (3, 135), (135, 112), (112, 54)]:
-            bases_by_id = dict([(b[base_id], b) for b in bases])
             self.bases.add_edge(b1, b2)
-            c1, c2 = bases_by_id[b1][coords], bases_by_id[b2][coords]
+            c1, c2 = bases[b1]['coords'], bases[b2]['coords']
             self.geosphere.add_connection(c1, c2)
     
     def move_camera(self, x, y, zoom):
