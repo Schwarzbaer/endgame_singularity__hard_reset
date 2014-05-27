@@ -20,6 +20,7 @@ import sys
 import yaml
 import datetime
 import networkx as nx
+import pprint
 
 from direct.showbase.ShowBase import ShowBase
 from direct.showbase.DirectObject import DirectObject
@@ -28,7 +29,7 @@ from panda3d.core import NodePath
 from geosphere import Geosphere
 from bases import base_id, coords, name, active
 from music import MusicPlayer
-from mechanics import GameSetup, GameState, Timeline, Event, GameClock
+from mechanics import GameState
 
 # Load base definitions
 f = open('bases.yml', 'r')
@@ -118,10 +119,8 @@ class Game(ShowBase, Settings):
         # Music
         self.music_player = MusicPlayer(self)
         # Game state
-        self.game_setup = GameSetup()
-        self.game_state = GameState(self.game_setup)
-        self.timeline = Timeline(self.game_state)
-        self.clock = GameClock(self.timeline)
+        self.game_state = GameState()
+        self.game_state.start()
         # Controls
         self.accept("m", self.toggle_geosphere_unwrapping)
         self.accept("arrow_right", self.move_camera, [1, 0, 0])
@@ -130,32 +129,31 @@ class Game(ShowBase, Settings):
         self.accept("arrow_down", self.move_camera, [0, -1, 0])
         self.accept("wheel_up", self.move_camera, [0, 0, -1])
         self.accept("wheel_down", self.move_camera, [0, 0, 1])
-        self.accept("c", self.start_clock)
-        self.accept("v", self.clock.set_factor, [0.0])
-        self.accept("b", self.clock.set_factor, [1.0])
-        self.accept("n", self.clock.set_factor, [10.0])
-        self.accept("s", self.clock.skip_clock_to_next_event)
+        self.accept("c", self.game_state.set_clock_factor, [0.0])
+        self.accept("v", self.game_state.set_clock_factor, [1.0])
+        self.accept("b", self.game_state.set_clock_factor, [60.0])
+        self.accept("n", self.game_state.set_clock_factor, [3600.0])
+        self.accept("j", self.game_state.skip_to_next_event)
+        self.accept("l", self.load, ["savegame.yml"])
+        self.accept("s", self.save, ["savegame.yml"])
+
+    def load(self, filename):
+        self.game_state.shutdown()
+        f = open(filename, 'r')
+        state = yaml.load(f.read())
+        f.close()
+        self.game_state = GameState(state)
+        self.accept("c", self.game_state.set_clock_factor, [0.0])
+        self.accept("v", self.game_state.set_clock_factor, [1.0])
+        self.accept("b", self.game_state.set_clock_factor, [60.0])
+        self.accept("n", self.game_state.set_clock_factor, [3600.0])
+        self.accept("j", self.game_state.skip_to_next_event)
+        self.game_state.start()
     
-    def start_clock(self):
-        # The game starts twenty minutes into the future
-        self.clock.set_time(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20))
-        # Just a test event (so far)
-        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+5),
-                                      self.game_state,
-                                      False))
-        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+10),
-                                      self.game_state,
-                                      False))
-        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+15),
-                                      self.game_state,
-                                      False))
-        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+20),
-                                      self.game_state,
-                                      True))
-        self.timeline.add_event(Event(datetime.datetime.utcnow() + datetime.timedelta(seconds = 60*20+25),
-                                      self.game_state,
-                                      True))
-        self.clock.start()
+    def save(self, filename):
+        f = open(filename, 'w')
+        f.write(yaml.dump(self.game_state.get_state()))
+        f.close()
 
     def toggle_geosphere_unwrapping(self):
         self.geosphere.toggle_unwrap()
